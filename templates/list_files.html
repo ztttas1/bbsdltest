@@ -1,0 +1,16 @@
+<!-- templates/list_files.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>BBS Files</title>
+</head>
+<body>
+    <h1>ファイルリスト</h1>
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('file_content', filename=file) }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
